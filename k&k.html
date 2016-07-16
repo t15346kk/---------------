@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <haed>
+    <title>駅と観光地の距離</title>
+    <meta charset="utf-8">
+    <script src="k&k.js"></script>
+　</head>
+        <body>
+        <form name="selbox1">
+        
+        <p>出発地点</p>
+        <select name="start" onchange="startspot()">
+        <option value="shibuya">渋谷駅　
+        <option value="sapporo">札幌駅
+        <option value="sendai">仙台駅
+        <option value="niigata">新潟駅
+        <option value="yokohama">横浜駅
+        <option value="utsunomiya">宇都宮駅
+        <option value="nagoya">名古屋駅
+        <option value="kyoto">京都駅
+        <option value="shinosaka">新大阪駅
+        <option value="hiroshima">広島駅
+        <option value="fukuoka">福岡駅
+        <option value="kagosimatyuuou">鹿児島中央駅
+        <option value="hakodate">函館空港
+        <option value="senndaiAirstation">仙台空港
+        <option value="naritaAirstation">成田国際空港
+        <option value="tyuubuAirstation">中部国際空港
+        <option value="kannsaiAirstation">関西国際空港
+        <option value="nagasakiAirstation">長崎空港
+        <option value="nahaAirstation">那覇空港
+        </select>
+        </form>
+        
+        <form name="selbox2">
+        
+        <p>観光地</p>
+        <select name="finish" onchange="finishspot()">
+        <option value="meijijinnguu">明治神宮
+        <option value="kawatifujienn">河内藤園
+        <option value="fujisann">富士山
+        <option value="sinnsaibasi">心斎橋
+        <option value="nisikiitiba">錦市場
+        <option value="kaiyuukann">海遊館
+        <option value="sennsouji">浅草寺
+        <option value="sibuyasennta-gai">渋谷センター街
+        <option value="doutonnbori">道頓堀
+        <option value="narakouenn">奈良公園
+        </select>
+        </form>
+        
+        <form>
+        <P>距離を求めてみよう</p>
+        <input type="button" value="計算する" onclick='clicked()'>
+        </form>
+</body>
+</html>
