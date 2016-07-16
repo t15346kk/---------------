@@ -35,11 +35,13 @@ var vacation = {
 //vacationLocationlat;
 //vacationLocationlong;
 
+//var stationLocation;
+//var vacationLocation;
 function getDistance(stationLocation, vacationLocation){
     
     return  6378.14 * Math.acos(Math.cos(radians(stationLocation.lat))*
     Math.cos(radians(vacationLocation.lat))*
-    Math.cos(radians(vacationLocationlong)-radians(stationLocation.long))+
+    Math.cos(radians(vacationLocation.long)-radians(stationLocation.long))+
     Math.sin(radians(stationLocation.lat))*
     Math.sin(radians(vacationLocation.lat)));
 }
@@ -51,12 +53,14 @@ function radians(deg){
     //alert(getDistance(stationLocation.lat,stationLocation.long,vacationLocation.lat,vacationLocation.long));
 //  ボタンが押されたら呼ばれる
 function clicked(){
-    var select1 = document.querySelector("#selbox1"); 
-    var stationLocation = stations[select1];
+    var select1 = document.querySelector("#start");
+    console.log(select1); 
+    var stationLocation = stations[select1.value];
+    console.log(stationLocation);
 
  
-    var select2 = document.querySelector("#selbox2");
-    var vacationLocation = vacation[select2];
+    var select2 = document.querySelector("#finish");
+    var vacationLocation = vacation[select2.value];
      
     //  どの場所が指定されているか調べる
     alert(getDistance(stationLocation, vacationLocation));
